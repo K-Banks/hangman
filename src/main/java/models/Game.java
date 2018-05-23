@@ -8,11 +8,13 @@ public class Game {
     private String answerWord;
     private List<Character> guessArray;
     private Integer turnCounter;
+    private char[] wordToChar;
 
     public Game(){
         this.answerWord = "";
         this.guessArray = new ArrayList<Character>();
         this.turnCounter = 6;
+        this.wordToChar = answerWord.toCharArray();
     }
 
     public String getAnswerWord() {
@@ -25,6 +27,10 @@ public class Game {
 
     public Integer getTurnCounter() {
         return turnCounter;
+    }
+
+    public char[] getWordToChar() {
+        return wordToChar;
     }
 
     public void setAnswer(String inputWord) {

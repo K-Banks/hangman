@@ -35,11 +35,24 @@ public class GameTest {
     }
 
     @Test
-    public void setAnswer_setAnswerWord_Apple() {
+    public void newGame_GetWordToChar_array() {
+        Game testGame = new Game();
+        assertTrue(testGame.getWordToChar() instanceof char[]);
+    }
+
+    @Test
+    public void setAnswer_setAnswerWord_apple() {
         Game testGame = new Game();
         testGame.setAnswer("apple");
         assertEquals("apple", testGame.getAnswerWord());
     }
+
+//    @Test
+//    public void setAnswer_setWordToChar_charArray() {
+//        Game testGame = new Game();
+//        testGame.setAnswer("apple");
+//        assertEquals(['a', 'p', 'p', 'l', 'e'], testGame.getWordToChar());
+//    }
 
     @Test
     public void wordLength_getWordLength_greaterThanZero() {
