@@ -17,4 +17,8 @@ public class Game {
     public String getAnswerWord() {
         return answerWord;
     }
+
+    public ArrayList<Character> getGuessArray() {
+        return null;
+    }
 }
