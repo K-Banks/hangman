@@ -27,4 +27,10 @@ public class GameTest {
         List<Character> testList = new ArrayList<Character>();
         assertEquals(testList, testGame.getGuessArray());
     }
+
+    @Test
+    public void newGame_getsTurnCounter_integer() {
+        Game testGame = new Game();
+        assertEquals(true, testGame.getTurnCounter() instanceof Integer);
+    }
 }

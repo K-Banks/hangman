@@ -18,7 +18,11 @@ public class Game {
         return answerWord;
     }
 
-    public ArrayList<Character> getGuessArray() {
+    public List<Character> getGuessArray() {
+        return guessArray;
+    }
+
+    public Integer getTurnCounter() {
         return null;
     }
 }
