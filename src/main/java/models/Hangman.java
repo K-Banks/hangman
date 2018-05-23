@@ -60,6 +60,8 @@ public class Hangman {
             hangmanImg.put(21, '-');
         } else if (counter == 1) {
             hangmanImg.put(25, '/');
+        } else if (counter == 0) {
+            hangmanImg.put(27, '\\');
         }
     }
 }
