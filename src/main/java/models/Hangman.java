@@ -50,6 +50,8 @@ public class Hangman {
     }
 
     public void drawHangman(int counter) {
-
+        if (counter == 5) {
+            hangmanImg.put(14, 'o');
+        }
     }
 }
