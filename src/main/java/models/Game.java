@@ -36,6 +36,6 @@ public class Game {
     }
 
     public int getWordLength() {
-        return 0;
+        return answerWord.length();
     }
 }
