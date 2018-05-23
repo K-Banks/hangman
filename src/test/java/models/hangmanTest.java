@@ -2,6 +2,9 @@ package models;
 
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static org.junit.Assert.*;
 
 public class hangmanTest {
@@ -9,5 +12,12 @@ public class hangmanTest {
     public void constructor_instantiatesNewHangman_true() {
         Hangman testHangman = new Hangman();
         assertTrue(testHangman instanceof Hangman);
+    }
+
+    @Test
+    public void newHangman_getHangmanImg_map() {
+        Hangman testHangman = new Hangman();
+        Map<Integer, String> testMap = new HashMap<Integer, String>();
+        assertEquals(testMap.getClass(), testHangman.getHangmanImg().getClass());
     }
 }
