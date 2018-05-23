@@ -39,9 +39,9 @@ public class Game {
     }
 
     public String randomizer(){
-        String[] options = {"humuhumunukunukuapuaa", "encyclopedia", "easy", "beneficiary"};
+        String[] options = {"humuhumunukunukuapuaa", "encyclopedia", "jazz", "beneficiary", "ultracrepidarian", "steatopygous", "pneumonoultramicroscopicsilicovolcanoconiosis", "hippopotomonstrosesquippedaliophobia", "strengths", "pizazz", "espionage", "yachtsman"};
         Random randomizer = new Random();
-        int selection = randomizer.nextInt(4);
+        int selection = randomizer.nextInt(options.length);
         return options[selection];
     }
 
