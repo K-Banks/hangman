@@ -47,12 +47,14 @@ public class GameTest {
         assertEquals("apple", testGame.getAnswerWord());
     }
 
-//    @Test
-//    public void setAnswer_setWordToChar_charArray() {
-//        Game testGame = new Game();
-//        testGame.setAnswer("apple");
-//        assertEquals(['a', 'p', 'p', 'l', 'e'], testGame.getWordToChar());
-//    }
+    @Test
+    public void setAnswer_setWordToChar_charArray() {
+        Game testGame = new Game();
+        String answer = "apple";
+        testGame.setAnswer(answer);
+        char[] expected = answer.toCharArray();
+        assertEquals(expected, testGame.getWordToChar());
+    }
 
     @Test
     public void wordLength_getWordLength_greaterThanZero() {
