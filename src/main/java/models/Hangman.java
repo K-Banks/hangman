@@ -45,7 +45,7 @@ public class Hangman {
         hangmanImg.put(35, '|');
     }
 
-    public Map<Integer, String> getHangmanImg() {
-        return null;
+    public Map<Integer, Character> getHangmanImg() {
+        return hangmanImg;
     }
 }

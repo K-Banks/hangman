@@ -17,7 +17,7 @@ public class hangmanTest {
     @Test
     public void newHangman_getHangmanImg_map() {
         Hangman testHangman = new Hangman();
-        Map<Integer, String> testMap = new HashMap<Integer, String>();
+        Map<Integer, Character> testMap = new HashMap<Integer, Character>();
         assertEquals(testMap.getClass(), testHangman.getHangmanImg().getClass());
     }
 }
