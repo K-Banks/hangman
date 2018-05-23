@@ -22,10 +22,18 @@ public class hangmanTest {
     }
 
     @Test
-    public void drawHangman_changesValueOfHangmanImg_character() {
+    public void drawHangman_changesValueOfHangmanImgTurn5_character() {
         Hangman testHangman = new Hangman();
         testHangman.drawHangman(5);
         Character expected = 'o';
         assertEquals(expected, testHangman.getHangmanImg().get(14));
+    }
+
+    @Test
+    public void drawHangman_changesValueOfHangmanImgTurn4_character() {
+        Hangman testHangman = new Hangman();
+        testHangman.drawHangman(4);
+        Character expected = '-';
+        assertEquals(expected, testHangman.getHangmanImg().get(18));
     }
 }
