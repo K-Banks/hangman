@@ -1,4 +1,5 @@
 import models.Game;
+import models.Hangman;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,19 +10,23 @@ public class App {
         Boolean programRunning = true;
         System.out.println("Welcome to Hangman. Let's begin.");
         Game game = new Game();
+        Hangman hangman = new Hangman();
         String randomAnswer = game.randomizer();
         game.setAnswer(randomAnswer);
         while(programRunning) {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             try {
 
-                System.out.println("  __ \n" +
-                                " |  |\n" +
-                                " o  |\n" +
-                                "-|- |\n" +
-                                "/ \\ |\n" +
-                                "    |");
-
+//                System.out.println("  __ \n" +
+//                                " |  |\n" +
+//                                " o  |\n" +
+//                                "-|- |\n" +
+//                                "/ \\ |\n" +
+//                                "    |");
+                for (Integer key: hangman.getHangmanImg().keySet()) {
+                    System.out.print(hangman.getHangmanImg().get(key));
+                }
+                System.out.println("_");
                 Integer lengthCounter = game.getWordLength();
                 for (char individualChar: game.getWordToChar()) {
                     if (game.getGuessArray().contains(individualChar)) {
@@ -51,12 +56,15 @@ public class App {
                     }
 
                     game.characterCheck(guess);
+
+                    hangman.drawHangman(game.getTurnCounter());
                     game.addCharacterToGuesses(guess);
                 } else {
                     System.out.println("Would you like to play again? - yes or no");
                     String userContinue = bufferedReader.readLine();
                     if (userContinue.equals("yes")){
                         game = new Game();
+                        hangman = new Hangman();
                         randomAnswer = game.randomizer();
                         game.setAnswer(randomAnswer);
                         programRunning = true;

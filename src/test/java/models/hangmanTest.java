@@ -33,16 +33,16 @@ public class hangmanTest {
     public void drawHangman_changesValueOfHangmanImgTurn4_character() {
         Hangman testHangman = new Hangman();
         testHangman.drawHangman(4);
-        Character expected = '-';
-        assertEquals(expected, testHangman.getHangmanImg().get(19));
+        Character expected = '|';
+        assertEquals(expected, testHangman.getHangmanImg().get(20));
     }
 
     @Test
     public void drawHangman_changesValueOfHangmanImgTurn3_character() {
         Hangman testHangman = new Hangman();
         testHangman.drawHangman(3);
-        Character expected = '|';
-        assertEquals(expected, testHangman.getHangmanImg().get(20));
+        Character expected = '-';
+        assertEquals(expected, testHangman.getHangmanImg().get(19));
     }
 
     @Test

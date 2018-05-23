@@ -53,15 +53,17 @@ public class Hangman {
         if (counter == 5) {
             hangmanImg.put(14, 'o');
         } else if (counter == 4) {
-            hangmanImg.put(19, '-');
-        } else if (counter == 3) {
             hangmanImg.put(20, '|');
+        } else if (counter == 3) {
+            hangmanImg.put(19, '-');
         } else if (counter == 2) {
             hangmanImg.put(21, '-');
         } else if (counter == 1) {
             hangmanImg.put(25, '/');
         } else if (counter == 0) {
             hangmanImg.put(27, '\\');
+        } else {
+            hangmanImg.put(32, ' ');
         }
     }
 }
