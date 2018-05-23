@@ -57,9 +57,18 @@ public class GameTest {
     }
 
     @Test
-    public void addCharacterToGuesses_addCharacterToGuessesArrayList_() {
+    public void addCharacterToGuesses_addCharacterToGuessesArrayList_true() {
         Game testGame = new Game();
         testGame.addCharacterToGuesses('a');
         assertTrue(testGame.getGuessArray().size() > 0);
+    }
+
+    @Test
+    public void characterCheck_decreasesGuessCounter_5() {
+        Game testGame = new Game();
+        testGame.setAnswer();
+        testGame.characterCheck('a');
+        Integer expected = 5;
+        assertEquals(expected, testGame.getTurnCounter());
     }
 }
