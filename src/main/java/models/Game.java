@@ -34,4 +34,8 @@ public class Game {
         answerWord = options[selection];
         return answerWord;
     }
+
+    public int getWordLength() {
+        return 0;
+    }
 }

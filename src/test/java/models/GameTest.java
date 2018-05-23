@@ -41,4 +41,11 @@ public class GameTest {
         testGame.setAnswer();
         assertFalse(testString.equals(testGame.getAnswerWord()));
     }
+
+    @Test
+    public void wordLength_getWordLength_greaterThanZero() {
+        Game testGame = new Game();
+        testGame.setAnswer();
+        assertTrue(testGame.getWordLength() > 0);
+    }
 }
