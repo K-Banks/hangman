@@ -2,6 +2,7 @@ package models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Game {
     private String answerWord;
@@ -27,7 +28,10 @@ public class Game {
     }
 
     public String setAnswer() {
-        answerWord = "";
+        String[] options = {"humuhumunukunukuapuaa", "encyclopedia", "easy", "beneficiary"};
+        Random randomizer = new Random();
+        int selection = randomizer.nextInt(4);
+        answerWord = options[selection];
         return answerWord;
     }
 }
