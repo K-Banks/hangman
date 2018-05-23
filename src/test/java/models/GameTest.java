@@ -55,4 +55,11 @@ public class GameTest {
         testGame.setAnswer();
         assertTrue(testGame.characterCheck('a'));
     }
+
+    @Test
+    public void addCharacterToGuesses_addCharacterToGuessesArrayList_() {
+        Game testGame = new Game();
+        testGame.addCharacterToGuesses('a');
+        assertTrue(testGame.getGuessArray().size() > 0);
+    }
 }

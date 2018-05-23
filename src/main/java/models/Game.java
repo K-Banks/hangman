@@ -39,12 +39,16 @@ public class Game {
         return answerWord.length();
     }
 
-    public boolean characterCheck(Character check) {
+    public boolean characterCheck(Character guessedCharacter) {
         Boolean characterPresent = false;
-        int indexOfCharacter = answerWord.indexOf(check);
+        int indexOfCharacter = answerWord.indexOf(guessedCharacter);
         if (indexOfCharacter != -1) {
             characterPresent = true;
         }
         return characterPresent;
+    }
+
+    public List<Character> addCharacterToGuesses(Character guessedCharacter) {
+        return guessArray;
     }
 }
