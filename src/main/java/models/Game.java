@@ -15,6 +15,6 @@ public class Game {
     }
 
     public String getAnswerWord() {
-        return null;
+        return answerWord;
     }
 }
