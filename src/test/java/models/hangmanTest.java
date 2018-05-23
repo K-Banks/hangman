@@ -34,6 +34,6 @@ public class hangmanTest {
         Hangman testHangman = new Hangman();
         testHangman.drawHangman(4);
         Character expected = '-';
-        assertEquals(expected, testHangman.getHangmanImg().get(18));
+        assertEquals(expected, testHangman.getHangmanImg().get(19));
     }
 }
