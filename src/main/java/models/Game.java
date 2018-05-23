@@ -49,6 +49,7 @@ public class Game {
     }
 
     public List<Character> addCharacterToGuesses(Character guessedCharacter) {
+        guessArray.add(guessedCharacter);
         return guessArray;
     }
 }
