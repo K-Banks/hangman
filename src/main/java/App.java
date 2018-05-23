@@ -14,12 +14,19 @@ public class App {
         while(programRunning) {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
             try {
+
+                System.out.println("  __ \n" +
+                                " |  |\n" +
+                                " o  |\n" +
+                                "-|- |\n" +
+                                "/ \\ |\n" +
+                                "    |");
+
                 Integer lengthCounter = game.getWordLength();
                 for (char individualChar: game.getWordToChar()) {
                     if (game.getGuessArray().contains(individualChar)) {
                         System.out.print(individualChar);
                         lengthCounter = lengthCounter-1;
-                        System.out.print(lengthCounter);
                     } else {
                         System.out.print("_ ");
                     }

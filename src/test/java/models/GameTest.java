@@ -37,7 +37,7 @@ public class GameTest {
     }
 
     @Test
-    public void newGame_GetWordToChar_array() {
+    public void newGame_getWordToChar_array() {
         Game testGame = new Game();
         assertTrue(testGame.getWordToChar() instanceof char[]);
     }
@@ -59,7 +59,7 @@ public class GameTest {
     }
 
     @Test
-    public void wordLength_getWordLength_greaterThanZero() {
+    public void getWordLength_getWordLength_greaterThanZero() {
         Game testGame = new Game();
         testGame.setAnswer("apple");
         assertTrue(testGame.getWordLength() > 0);
