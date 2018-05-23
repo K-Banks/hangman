@@ -24,9 +24,13 @@ public class App {
                     }
                 }
                 System.out.println();
-                System.out.println("You have " + game.getTurnCounter() + " incorrect guesses left");
+                System.out.println("You have " + game.getTurnCounter() + " incorrect guesses left. So far you have guessed " + game.getGuessArray());
                 System.out.println("Please enter your guess: ");
                 char guess = bufferedReader.readLine().toCharArray()[0];
+                while (game.getGuessArray().contains(guess)) {
+                    System.out.println("You have already guessed " +guess+ ". Please enter a new guess: ");
+                    guess = bufferedReader.readLine().toCharArray()[0];
+                }
                 game.characterCheck(guess);
                 game.addCharacterToGuesses(guess);
                 if (game.getTurnCounter() == 0) {
@@ -52,7 +56,6 @@ public class App {
                         programRunning = false;
                     }
                 }
-
             } catch(IOException e) {
                 e.printStackTrace();
             }
