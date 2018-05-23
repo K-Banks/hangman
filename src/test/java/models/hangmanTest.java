@@ -20,4 +20,12 @@ public class hangmanTest {
         Map<Integer, Character> testMap = new HashMap<Integer, Character>();
         assertEquals(testMap.getClass(), testHangman.getHangmanImg().getClass());
     }
+
+    @Test
+    public void drawHangman_changesValueOfHangmanImg_character() {
+        Hangman testHangman = new Hangman();
+        testHangman.drawHangman(5);
+        Character expected = 'o';
+        assertEquals(expected, testHangman.getHangmanImg().get(14));
+    }
 }

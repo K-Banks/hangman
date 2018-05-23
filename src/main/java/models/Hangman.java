@@ -48,4 +48,8 @@ public class Hangman {
     public Map<Integer, Character> getHangmanImg() {
         return hangmanImg;
     }
+
+    public void drawHangman(int counter) {
+
+    }
 }
