@@ -27,12 +27,15 @@ public class Game {
         return turnCounter;
     }
 
-    public String setAnswer() {
+    public void setAnswer(String inputWord) {
+        answerWord = inputWord;
+    }
+
+    public String randomizer(){
         String[] options = {"humuhumunukunukuapuaa", "encyclopedia", "easy", "beneficiary"};
         Random randomizer = new Random();
         int selection = randomizer.nextInt(4);
-        answerWord = options[selection];
-        return answerWord;
+        return options[selection];
     }
 
     public int getWordLength() {
@@ -50,8 +53,7 @@ public class Game {
         return characterPresent;
     }
 
-    public List<Character> addCharacterToGuesses(Character guessedCharacter) {
+    public void addCharacterToGuesses(Character guessedCharacter) {
         guessArray.add(guessedCharacter);
-        return guessArray;
     }
 }

@@ -35,24 +35,23 @@ public class GameTest {
     }
 
     @Test
-    public void newGame_setsRandomWordFromArrayForAnswerWord_nonEmptyString() {
+    public void setAnswer_setAnswerWord_Apple() {
         Game testGame = new Game();
-        String testString = "";
-        testGame.setAnswer();
-        assertFalse(testString.equals(testGame.getAnswerWord()));
+        testGame.setAnswer("apple");
+        assertEquals("apple", testGame.getAnswerWord());
     }
 
     @Test
     public void wordLength_getWordLength_greaterThanZero() {
         Game testGame = new Game();
-        testGame.setAnswer();
+        testGame.setAnswer("apple");
         assertTrue(testGame.getWordLength() > 0);
     }
 
     @Test
     public void characterCheck_checksAnswerWordForCharacter_true() {
         Game testGame = new Game();
-        testGame.setAnswer();
+        testGame.setAnswer("apple");
         assertTrue(testGame.characterCheck('a'));
     }
 
@@ -66,9 +65,16 @@ public class GameTest {
     @Test
     public void characterCheck_decreasesGuessCounter_5() {
         Game testGame = new Game();
-        testGame.setAnswer();
+        testGame.setAnswer("apple");
         testGame.characterCheck('z');
         Integer expected = 5;
         assertEquals(expected, testGame.getTurnCounter());
+    }
+
+    @Test
+    public void randomizer_selectsRandomWordFromArray_nonEmptyString() {
+        Game testGame = new Game();
+        String testString = "";
+        assertFalse(testString.equals(testGame.randomizer()));
     }
 }
