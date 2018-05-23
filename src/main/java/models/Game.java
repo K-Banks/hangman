@@ -25,4 +25,9 @@ public class Game {
     public Integer getTurnCounter() {
         return turnCounter;
     }
+
+    public String setAnswer() {
+        answerWord = "";
+        return answerWord;
+    }
 }

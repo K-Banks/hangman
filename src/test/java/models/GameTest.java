@@ -33,4 +33,12 @@ public class GameTest {
         Game testGame = new Game();
         assertEquals(true, testGame.getTurnCounter() instanceof Integer);
     }
+
+    @Test
+    public void newGame_setsRandomWordFromArrayForAnswerWord_nonEmptyString() {
+        Game testGame = new Game();
+        String testString = "";
+        testGame.setAnswer();
+        assertFalse(testString.equals(testGame.getAnswerWord()));
+    }
 }
