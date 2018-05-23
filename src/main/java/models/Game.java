@@ -35,6 +35,8 @@ public class Game {
 
     public void setAnswer(String inputWord) {
         answerWord = inputWord;
+        wordToChar = inputWord.toCharArray();
+        System.out.println(wordToChar.getClass());
     }
 
     public String randomizer(){

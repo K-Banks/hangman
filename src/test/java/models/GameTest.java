@@ -2,7 +2,9 @@ package models;
 
 import org.junit.Test;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -53,7 +55,8 @@ public class GameTest {
         String answer = "apple";
         testGame.setAnswer(answer);
         char[] expected = answer.toCharArray();
-        assertEquals(expected, testGame.getWordToChar());
+        System.out.println(expected.getClass() + "1");
+        assertTrue(Arrays.equals(expected, testGame.getWordToChar()));
     }
 
     @Test
