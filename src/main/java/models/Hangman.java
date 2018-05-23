@@ -58,6 +58,8 @@ public class Hangman {
             hangmanImg.put(20, '|');
         } else if (counter == 2) {
             hangmanImg.put(21, '-');
+        } else if (counter == 1) {
+            hangmanImg.put(25, '/');
         }
     }
 }
