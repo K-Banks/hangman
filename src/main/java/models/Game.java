@@ -44,6 +44,8 @@ public class Game {
         int indexOfCharacter = answerWord.indexOf(guessedCharacter);
         if (indexOfCharacter != -1) {
             characterPresent = true;
+        } else {
+            turnCounter = turnCounter -1;
         }
         return characterPresent;
     }

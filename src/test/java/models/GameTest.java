@@ -67,7 +67,7 @@ public class GameTest {
     public void characterCheck_decreasesGuessCounter_5() {
         Game testGame = new Game();
         testGame.setAnswer();
-        testGame.characterCheck('a');
+        testGame.characterCheck('z');
         Integer expected = 5;
         assertEquals(expected, testGame.getTurnCounter());
     }
