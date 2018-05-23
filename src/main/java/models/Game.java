@@ -23,6 +23,6 @@ public class Game {
     }
 
     public Integer getTurnCounter() {
-        return null;
+        return turnCounter;
     }
 }
