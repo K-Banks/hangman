@@ -38,4 +38,8 @@ public class Game {
     public int getWordLength() {
         return answerWord.length();
     }
+
+    public boolean characterCheck(Character check) {
+        return false;
+    }
 }

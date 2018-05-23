@@ -48,4 +48,11 @@ public class GameTest {
         testGame.setAnswer();
         assertTrue(testGame.getWordLength() > 0);
     }
+
+    @Test
+    public void characterCheck_checksAnswerWordForCharacter_true() {
+        Game testGame = new Game();
+        testGame.setAnswer();
+        assertTrue(testGame.characterCheck('a'));
+    }
 }
