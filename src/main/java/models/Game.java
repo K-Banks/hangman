@@ -40,6 +40,11 @@ public class Game {
     }
 
     public boolean characterCheck(Character check) {
-        return false;
+        Boolean characterPresent = false;
+        int indexOfCharacter = answerWord.indexOf(check);
+        if (indexOfCharacter != -1) {
+            characterPresent = true;
+        }
+        return characterPresent;
     }
 }
