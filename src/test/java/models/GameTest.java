@@ -55,7 +55,6 @@ public class GameTest {
         String answer = "apple";
         testGame.setAnswer(answer);
         char[] expected = answer.toCharArray();
-        System.out.println(expected.getClass() + "1");
         assertTrue(Arrays.equals(expected, testGame.getWordToChar()));
     }
 
